@@ -14,7 +14,7 @@ import pickle
 #from sklearn.ensemble import RandomForestRegressor
 
 # Load the trained model
-with open('/content/rf_trained_model.pkl', 'rb') as file:
+with open('rf_trained_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # List of feature names in the order as they appear in the input data
