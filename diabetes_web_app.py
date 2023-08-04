@@ -7,6 +7,13 @@ Original file is located at
     https://colab.research.google.com/drive/1tvTvGpl1owYd5ucbguA2AnxHLYNuJnvI
 """
 
+#!pip install streamlit
+import numpy as np
+import pickle
+import streamlit as st
+
+loaded_model= pickle.load(open('/content/trained_model .sav', 'rb'))
+
 def diabetes_prediction(input_data):
 
   input_data_as_numpy_array = np.asarray(input_data)
