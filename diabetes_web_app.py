@@ -12,7 +12,40 @@ import numpy as np
 import pickle
 import streamlit as st
 
-loaded_model= pickle.load(open('C:\temp/trained_model .sav', 'rb'))
+#loaded_model= pickle.load(open('C:/temp/trained_model.sav', 'rb'))
+
+#import pickle
+
+import os
+#import pickle
+
+# Define the file path
+file_path = '/content/trained_model.sav'
+
+# Check if the file exists
+if os.path.exists(file_path):
+    print('The file exists.')
+else:
+    print('The file does not exist or the path is incorrect.')
+
+# Get more information about the file path
+print('Absolute path:', os.path.abspath(file_path))
+print('Directory:', os.path.dirname(file_path))
+print('File name:', os.path.basename(file_path))
+
+# Load the trained model
+with open(file_path, 'rb') as file:
+    loaded_model = pickle.load(file)
+
+# Use the loaded model to make predictions
+...
+
+# Load the trained model
+with open('/content/trained_model.sav', 'rb') as file:
+    loaded_model = pickle.load(file)
+
+# Use the loaded model to make predictions
+...
 
 def diabetes_prediction(input_data):
 
